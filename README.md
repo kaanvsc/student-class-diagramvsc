@@ -21,6 +21,7 @@ java Main
 
 ```mermaid
 classDiagram
+    direction LR
     Person <|-- Student
     Student "*" -- "*" Course
 
