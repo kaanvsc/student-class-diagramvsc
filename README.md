@@ -17,3 +17,33 @@ Java implementation of the student class diagram.
 javac *.java
 java Main
 ```
+## Class Diagram
+
+```mermaid
+classDiagram
+    Person <|-- Student
+    Student "*" -- "*" Course
+
+    class Person {
+        -String name
+        -int id
+        +getName() String
+        +getId() int
+    }
+    class Student {
+        -String studentNo
+        -List~Course~ enrolledCourses
+        +enroll(Course)
+        +drop(Course)
+        +setGrade(Course, double)
+        +calculateGPA() double
+    }
+    class Course {
+        -String code
+        -String title
+        -int credits
+        +getCode() String
+        +getTitle() String
+        +getCredits() int
+    }
+```
